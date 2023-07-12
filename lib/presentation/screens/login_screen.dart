@@ -165,6 +165,48 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
 
           20.spaceHeight(),
+        SizedBox(
+          height: 30,
+          child:   Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                width: 101,
+                height: 1,
+                decoration: BoxDecoration(color: Color(0xFF213345)),
+              ),
+              const SizedBox(width: 20),
+              Text(
+                'OR',
+                style: TextStyle(
+                  color: Color(0xFF8B8B8B),
+                  fontSize: 16,
+                  fontFamily: 'Mont',
+                  fontWeight: FontWeight.w600,
+
+                ),
+              ),
+              const SizedBox(width: 20),
+              Container(
+                width: 100,
+                height: 1,
+                decoration: BoxDecoration(color: Color(0xFF213345)),
+              ),
+            ],
+          ),
+        ),
+          20.spaceHeight(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              IconButton(onPressed: (){}, icon: AppIcons.googleIcon),
+              10.spaceWidth(),
+              IconButton(onPressed: (){}, icon: AppIcons.appleIcon)
+            ],
+          ),
+          10.spaceHeight(),
           SizedBox(
             width: 181,
             child: Text.rich(

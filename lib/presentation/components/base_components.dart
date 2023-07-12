@@ -55,6 +55,12 @@ class AppIcons{
   static Widget activityIcon = SvgPicture.asset(
     'assets/svgs/activity.svg',
   );
+  static Widget googleIcon = SvgPicture.asset(
+    'assets/svgs/google.svg',
+  );
+  static Widget appleIcon = SvgPicture.asset(
+    'assets/svgs/apple.svg',
+  );
   static Widget notificationIcon = SvgPicture.asset(
     'assets/svgs/notification.svg',
   );
