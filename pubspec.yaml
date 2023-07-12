@@ -33,6 +33,12 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   flutter_svg: ^1.1.5
+  flutter_bloc: ^7.0.0
+  equatable: ^2.0.0
+  retrofit: ^2.0.0
+  retrofit_generator: ^2.0.0
+  json_serializable: ^4.0.0
+  http: ^0.13.0
 
 dev_dependencies:
   flutter_test:

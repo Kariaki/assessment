@@ -1,6 +1,7 @@
 import 'package:assessment/config/string_resources.dart';
 import 'package:assessment/presentation/components/base_components.dart';
 import 'package:assessment/presentation/components/buttons.dart';
+import 'package:assessment/presentation/screens/home_screen.dart';
 import 'package:assessment/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
@@ -156,7 +157,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                     const SizedBox(height: 32),
-                    PrimaryButton(onPressed: (){}, title: StringResource.login),
+                    PrimaryButton(onPressed: (){
+                      context.push(HomeScreen());
+                    }, title: StringResource.login),
                   ],
                 ),
 

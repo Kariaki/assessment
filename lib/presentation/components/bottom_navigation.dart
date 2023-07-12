@@ -19,8 +19,9 @@ class _MainBottomNavigationState extends State<MainBottomNavigation> {
   Widget build(BuildContext context) {
 
     return BottomNavigationBar(
-      backgroundColor: AppColors.primaryButtonColor,
+      backgroundColor: AppColors.bottomNavColor,
       currentIndex: _currentIndex,
+      iconSize: 30,
       onTap: (index){
         setState(() {
           _currentIndex=index;

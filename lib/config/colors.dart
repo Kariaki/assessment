@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors{
 
   static const primaryButtonColor =  Color(0xFFE9B96B);
+  static const bottomNavColor =  Color(0xFF213345);
   static const loginHintColor = Color(0xFF8B8B8B);
   static const white = Colors.white;
   static const backgroundColor = Color(0xFF0E2033);
