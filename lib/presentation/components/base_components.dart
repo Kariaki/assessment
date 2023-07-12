@@ -30,6 +30,7 @@ class AppComponents {
       backgroundColor: AppColors.backgroundColor,
       shadowColor: Colors.transparent,
       title: appBarLeading(),
+      automaticallyImplyLeading: false,
       actions: [
         IconButton(onPressed: (){}, icon: AppIcons.notificationIcon)
       ],
@@ -54,6 +55,10 @@ class AppIcons{
 
   static Widget activityIcon = SvgPicture.asset(
     'assets/svgs/activity.svg',
+
+  );
+  static Widget eye =  SvgPicture.asset(
+    'assets/svgs/eyeOff.svg',
   );
   static Widget googleIcon = SvgPicture.asset(
     'assets/svgs/google.svg',

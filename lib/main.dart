@@ -1,6 +1,9 @@
+import 'package:assessment/presentation/bloc/login/login_bloc_state.dart';
+import 'package:assessment/presentation/bloc/login_bloc.dart';
 import 'package:assessment/presentation/screens/home_screen.dart';
 import 'package:assessment/presentation/screens/login_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'config/colors.dart';
 
@@ -19,7 +22,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.backgroundColor,
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: BlocProvider(
+        create: (context) => LoginBloc(LoginInitial()),
+        child: const MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }
@@ -34,9 +40,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-     return LoginScreen();
+    return LoginScreen();
   }
 }
