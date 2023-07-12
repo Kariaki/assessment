@@ -1,6 +1,6 @@
 class StringResource{
 
-  static const login = 'Login';
+  static const login = 'Log In';
   static const emailAddress = 'Email Address';
   static const emailHint = 'you.email.com';
   static const password = 'Password';
