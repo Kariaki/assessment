@@ -47,7 +47,9 @@ class _LoginScreenState extends State<LoginScreen> {
               return;
             }
             if(state is LoginError){
-              //TODO SHOW ERROR
+              final error = state as LoginError;
+              ScaffoldMessenger.of(context).showSnackBar(
+                   SnackBar(content: Text(error.message)));
               return;
             }
           },
@@ -55,6 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
             return AppComponents.pagePadding(
                 child: SingleChildScrollView(
               child: Column(
+                //crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   20.spaceHeight(),
                   Container(
@@ -82,8 +85,8 @@ class _LoginScreenState extends State<LoginScreen> {
                               height: 172,
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   const Text(
                                     StringResource.emailAddress,
@@ -99,6 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                     height: 45,
                                     child: TextField(
                                       controller: emailController,
+                                      style: TextStyle(color: Colors.white),
                                       decoration: InputDecoration(
                                           filled: true,
                                           fillColor: const Color(0xB20E2033),
@@ -145,6 +149,8 @@ class _LoginScreenState extends State<LoginScreen> {
                                   SizedBox(
                                     height: 45,
                                     child: TextField(
+
+                                      style: TextStyle(color: Colors.white),
                                       controller: passwordController,
                                       decoration: InputDecoration(
                                           filled: true,

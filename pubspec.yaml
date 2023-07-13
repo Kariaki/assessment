@@ -68,6 +68,9 @@ flutter:
     - assets/svgs/google.svg
     - assets/svgs/btc.svg
     - assets/svgs/eth.svg
+    - assets/images/rectangle.png
+    - assets/images/select_wallet.png
+    - assets/images/noise.png
     - assets/svgs/btcusd.svg
     - assets/svgs/eyeOff.svg
     - assets/svgs/notification.svg

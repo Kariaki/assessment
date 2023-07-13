@@ -7,7 +7,7 @@ class LoginEntity{
   const LoginEntity({required this.username,required this.password});
 
   LoginModel toLoginModel(){
-    return LoginModel(username: username, password: password);
+    return LoginModel(email: username, password: password);
   }
 
 }

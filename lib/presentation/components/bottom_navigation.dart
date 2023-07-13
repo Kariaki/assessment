@@ -18,32 +18,41 @@ class _MainBottomNavigationState extends State<MainBottomNavigation> {
   @override
   Widget build(BuildContext context) {
 
-    return BottomNavigationBar(
-      backgroundColor: AppColors.bottomNavColor,
-      currentIndex: _currentIndex,
-      iconSize: 30,
-      onTap: (index){
-        setState(() {
-          _currentIndex=index;
-        });
-        widget.onTap(index);
-      },
-      showSelectedLabels: false, // Hide labels of selected items
-      showUnselectedLabels: false, // Hide labels of unselected items
-      items: [
-        BottomNavigationBarItem(
-            icon: AppIcons.graphIcon,
-            label: ''
+    return SizedBox(
+      height: 90,
+      child: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20.0),
+          topRight: Radius.circular(20.0),
         ),
-        BottomNavigationBarItem(
-            icon:AppIcons.activityIcon,
-            label: ''
+        child: BottomNavigationBar(
+          backgroundColor: AppColors.bottomNavColor,
+          currentIndex: _currentIndex,
+          iconSize: 30,
+          onTap: (index){
+            setState(() {
+              _currentIndex=index;
+            });
+            widget.onTap(index);
+          },
+          showSelectedLabels: false, // Hide labels of selected items
+          showUnselectedLabels: false, // Hide labels of unselected items
+          items: [
+            BottomNavigationBarItem(
+                icon: AppIcons.graphIcon,
+                label: ''
+            ),
+            BottomNavigationBarItem(
+                icon:AppIcons.activityIcon,
+                label: ''
+            ),
+            BottomNavigationBarItem(
+                icon:AppIcons.settingsIcon,
+                label: ''
+            ),
+          ],
         ),
-        BottomNavigationBarItem(
-            icon:AppIcons.settingsIcon,
-            label: ''
-        ),
-      ],
+      ),
     );
   }
 }

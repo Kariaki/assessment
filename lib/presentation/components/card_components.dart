@@ -1,4 +1,5 @@
 import 'package:assessment/config/colors.dart';
+import 'package:assessment/presentation/model/crypto_list_model.dart';
 import 'package:assessment/utils/extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -6,7 +7,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../config/styles.dart' as R;
 
 class HorizontalCardComponent extends StatefulWidget {
-  const HorizontalCardComponent({Key? key}) : super(key: key);
+  final CryptoListModel model;
+  const HorizontalCardComponent({Key? key,required this.model}) : super(key: key);
 
   @override
   State<HorizontalCardComponent> createState() =>
@@ -31,10 +33,10 @@ class _HorizontalCardComponentState extends State<HorizontalCardComponent> {
        mainAxisAlignment: MainAxisAlignment.start,
        crossAxisAlignment: CrossAxisAlignment.start,
        children: [
-         SvgPicture.asset('assets/svgs/btc.svg'),
+         SvgPicture.asset(widget.model.image),
          18.spaceHeight(),
          Text(
-           'BTCUSDT',
+           widget.model.name,
            style: TextStyle(
              color: Colors.white24,
              fontSize: 13,
@@ -43,7 +45,7 @@ class _HorizontalCardComponentState extends State<HorizontalCardComponent> {
          ),
          const SizedBox(height: 4),
          Text(
-           '36.77 %',
+           widget.model.percent,
            style: TextStyle(
              color: Colors.white,
              fontSize: 20,

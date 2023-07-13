@@ -3,6 +3,7 @@ import 'package:assessment/config/dimens.dart';
 import 'package:assessment/config/styles.dart';
 import 'package:assessment/presentation/components/bottom_navigation.dart';
 import 'package:assessment/presentation/components/card_components.dart';
+import 'package:assessment/presentation/model/crypto_list_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -15,7 +16,7 @@ class AppComponents {
       Padding(padding: const EdgeInsets.only(
           left: Dimens.pagePadding, right: Dimens.pagePadding), child: child,);
 
-  static Widget cardComponent1() => HorizontalCardComponent();
+  static Widget cardComponent1({required CryptoListModel model}) => HorizontalCardComponent(model:model);
   static Widget cardComponent2() => ListItemComponent();
   static BottomNavigationBarItem bottomNavigationBarItem({required Icon icon}) {
     return BottomNavigationBarItem(

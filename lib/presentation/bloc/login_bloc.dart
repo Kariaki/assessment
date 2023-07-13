@@ -24,7 +24,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         yield LoginSuccess();
       } else if (result is DataFailed) {
         final errorResult = result as DataFailed;
-        yield LoginError(errorResult.toString());
+        yield LoginError(errorResult.error!);
       }
     }
   }
